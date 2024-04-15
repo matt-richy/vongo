@@ -1,0 +1,201 @@
+.home-image {
+  background-image: url(./river-delta.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 230, 166);
+  font-size: 1rem;
+  width: 100%;
+  font-family: sans-serif;
+  text-shadow: 3px 3px 40px #000000;
+}
+p {
+  font-size: 1.2rem;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+@keyframes sticky-parallax-header-move-and-size {
+  from {
+    background-position: 50% 0;
+    height: 100vh;
+    font-size: calc(4vw + 1em);
+  }
+  to {
+    background-position: 50% 100%;
+    background-color: #0b1584;
+    height: 10vh;
+    font-size: 1em;
+    transform: translateY(-100px);
+  }
+}
+
+#sticky-parallax-header {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+
+  animation: sticky-parallax-header-move-and-size linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+}
+
+.body1 {
+  margin: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .body1 {
+    margin: 8rem;
+  }
+  .firstImage {
+    width: 400px;
+  }
+}
+.tech-spec-div {
+  z-index: -100;
+}
+
+.spacer {
+  height: 900px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.firstImageDiv {
+  display: flex;
+  justify-content: center;
+}
+.firstImage {
+  background-color: white;
+  height: 100%;
+  animation: imageAnimate;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+  z-index: -1;
+}
+.tech-specs {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: -1;
+}
+
+.about-vongo {
+  margin: 1rem;
+}
+.specs {
+  font-size: clamp(2rem, 2.5rem, 4rem);
+  margin-top: 2rem;
+  animation: fadeInUp;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  font-weight: 500;
+}
+
+.spacer1 {
+  height: 150px;
+}
+.spacer2 {
+  height: 80px;
+}
+.grid6 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes imageAnimate {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  80% {
+    transform: translateX(-50);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.grid-specs {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto auto;
+}
+
+.grid-specs > * {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.grid3 {
+  display: flex;
+}
+
+.grid8 {
+  grid-column: span 2;
+}
+
+@media screen and (min-width: 480px) {
+  .grid-specs {
+    grid-template-columns: auto auto auto;
+    gap: 1.5rem;
+  }
+  .grid7 {
+    grid-column: span 3;
+  }
+  .grid5 {
+    grid-column: span 2;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

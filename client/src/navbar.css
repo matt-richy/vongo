@@ -1,0 +1,21 @@
+.nav-bar {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(255, 230, 166);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 2rem;
+  font-style: san-sarif;
+}
+.lists {
+  text-decoration: none;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  color: rgb(30, 103, 13);
+  font-size: 2rem;
+}
