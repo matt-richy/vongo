@@ -62,7 +62,7 @@ export default function Buy() {
     }));
     console.log(cartForDb);
     axios
-      .post("http://localhost:5000/api/add", cartForDb)
+      .post("/api/add", cartForDb)
       .then((response) => {
         console.log("FUck yes");
       })

@@ -28,10 +28,7 @@ const Cart = () => {
     };
     console.log(paymentInfo);
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/payment",
-        paymentInfo
-      );
+      const response = await axios.post("/api/payment", paymentInfo);
       console.log("response is", response.data);
       return response;
     } catch (error) {
@@ -96,7 +93,7 @@ const Cart = () => {
     console.log("this is your order", order);
     console.log("this is your cart", cartUser);
     axios
-      .post("http://localhost:5000/api/addUser", newOrder)
+      .post("/api/addUser", newOrder)
       .then("success")
       .catch((error) => "error");
   };
